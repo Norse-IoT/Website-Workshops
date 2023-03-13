@@ -1,0 +1,1 @@
+This is a template that can be used as a resume. Just fill in your information!
