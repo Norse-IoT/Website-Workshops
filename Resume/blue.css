@@ -51,3 +51,6 @@ header, #contact-side {
 .company {
     font-weight: bold;
 }
+body {
+    margin: 0;
+}
