@@ -1,0 +1,53 @@
+header h1, header h2 {
+    margin: 0;
+}
+p {
+    margin-top: .5em;
+    margin-bottom: .5em;
+}
+main {
+    margin: 3em;
+}
+main {
+    display: flex;
+    justify-content: space-between;
+}
+header h1 {
+    font-size: 3.4em;
+}
+.date {
+    color: rgb(67, 67, 67);
+    
+}
+h3 {
+    color: #3e758e;
+    margin-top: 2em;
+}
+#contact-side {
+    display: flex;
+    flex-direction: column;
+}
+a {
+    color: #015d82;
+    font-weight: bold;
+}
+a:hover {
+    color:#3e758e
+}
+#main-1, #name {
+    margin-right: 4em;
+}
+
+header, #contact-side {
+    min-height: 6em;
+    height: fit-content;
+    padding-bottom: 1em;
+}
+
+#contact-top, #name-seperator {
+    display: none;
+}
+
+.company {
+    font-weight: bold;
+}

@@ -1,0 +1,73 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@500&family=Source+Code+Pro&display=swap');
+
+html {
+    font-family: 'Source Code Pro', sans-serif;
+}
+
+header h1, header h2 {
+    margin: 0;
+    font-family: 'Oswald', sans-serif;
+    text-transform: uppercase;
+}
+p {
+    margin-top: .5em;
+    margin-bottom: .5em;
+}
+main {
+    margin: 3em;
+}
+main {
+    justify-content: space-between;
+}
+header h1 {
+    font-size: 3.4em;
+    color: #434343;
+}
+header h2 {
+    display: none;
+}
+.date {
+    color: #434343;
+    
+}
+h3 {
+    color: #434343;
+    margin-top: 2em;
+    margin-bottom: 2em;
+    text-transform: uppercase;
+    font-size: 1.3em;
+}
+
+.resume-employer {
+    color: #c02121;
+    font-weight: bold;
+}
+
+#contact-top {
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 1em;
+}
+
+a {
+    color: #820101;
+    font-weight: bold;
+}
+
+a:hover {
+    color:#8e3e3e
+}
+
+header {
+    min-height: 4em;
+    height: fit-content;
+    padding-bottom: .5em;
+}
+
+#contact-side {
+    display: none;
+}
+
+#name-seperator {
+    border: solid 3px #434343
+}
