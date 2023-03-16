@@ -1,12 +1,19 @@
 let style = [
-    {name:"Blue", link:"blue.css"},
-    {name:"Red", link:"red.css"}
+    {name:"Blue Resume", link:"blue.css"},
+    {name:"Red Resume", link:"red.css"},
+    {name:"Green Resume", link:"green.css"}
     ]
-    
 window.addEventListener("load", function(){
     document.querySelector("nav").innerHTML = `<div>Norse IoT Resume Workshops</div><div id="projects"></div>`
     style.forEach(function(css) {
-        document.querySelector("#projects").innerHTML += `<button onclick="changeStyle('${css.link}')">${css.name}</button>`
+        if (css.link.search(".css") != -1) {
+            document.querySelector("#projects").innerHTML += `<button onclick="changeStyle('${css.link}')">${css.name}</button>`
+
+        }
+        else {
+            document.querySelector("#projects").innerHTML += `<a href="${css.link}"><button>${css.name}</button></a>`
+
+        }
     })
 });
 

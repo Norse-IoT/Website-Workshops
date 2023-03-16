@@ -1,3 +1,9 @@
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro&display=swap');
+body {
+    font-family: 'Source Sans Pro', sans-serif;
+    margin: 0;
+}
+
 header h1, header h2 {
     margin: 0;
 }
@@ -44,7 +50,7 @@ header, #contact-side {
     padding-bottom: 1em;
 }
 
-#contact-top, #name-seperator {
+#contact-top, #name-seperator, #header-seperator {
     display: none;
 }
 
