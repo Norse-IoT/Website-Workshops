@@ -16,10 +16,47 @@ window.addEventListener("load", function(){
 
         }
     })
-    document.querySelector("nav").innerHTML += `<a download href="https://norse-iot.github.io/Website-Workshops/Resume/index.html"><button>Download Template</button></a><a class='css-download' download href="https://norse-iot.github.io/Website-Workshops/Resume/red.css"><button>Download CSS</button></a>`
+    document.querySelector("nav").innerHTML += `<button onclick='download()'>Download Template</button></a>`
 });
 
 function changeStyle(style) {
     document.querySelector("link").href = style
     document.querySelector(".css-download").href = `https://norse-iot.github.io/Website-Workshops/Resume/${style}`
+    css = style;
 }
+
+let html;
+let css = "red.css";
+async function download() {
+    let connection = await fetch("http://127.0.0.1:5500/Resume/index.html");
+    html = await connection.text();
+    let styleBegin = html.slice(0, html.search("<!--STYLE SWITCHER BEGIN-->"))
+    let styleEnd = html.slice(html.search("<!--STYLE SWITCHER END-->")+26)
+    html = styleBegin+styleEnd
+    let linkBegin = html.slice(0,html.search("<link"))
+    let linkEnd = html.slice(html.search(".css\">")+6)
+    let link = (html.slice(linkBegin, linkEnd))
+    
+    connection = await fetch(`http://127.0.0.1:5500/Resume/${css}`);
+    let downloadCSS = await connection.text();
+    html = `${linkBegin}<style>${downloadCSS}</style>${linkEnd}`
+
+    
+    let textFileAsBlob = new Blob([html], { type: "text" });
+    let downloadLink = document.createElement('a');
+    downloadLink.download = "index.html";
+    downloadLink.innerHTML = 'Download File';
+
+    if (window.webkitURL != null) {
+        downloadLink.href = window.webkitURL.createObjectURL(
+            textFileAsBlob
+        );
+    } else {
+        downloadLink.href = window.URL.createObjectURL(textFileAsBlob);
+        downloadLink.onclick = destroyClickedElement;
+        downloadLink.style.display = 'none';
+        document.body.appendChild(downloadLink);
+    }
+
+    downloadLink.click();
+} 
