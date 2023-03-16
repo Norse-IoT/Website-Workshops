@@ -21,7 +21,6 @@ window.addEventListener("load", function(){
 
 function changeStyle(style) {
     document.querySelector("link").href = style
-    document.querySelector(".css-download").href = `https://norse-iot.github.io/Website-Workshops/Resume/${style}`
     css = style;
 }
 
@@ -41,7 +40,7 @@ async function download() {
     let downloadCSS = await connection.text();
     html = `${linkBegin}<style>${downloadCSS}</style>${linkEnd}`
 
-    
+
     let textFileAsBlob = new Blob([html], { type: "text" });
     let downloadLink = document.createElement('a');
     downloadLink.download = "index.html";
