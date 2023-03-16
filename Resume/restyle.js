@@ -4,7 +4,7 @@ let style = [
     {name:"Green Resume", link:"green.css"}
     ]
 window.addEventListener("load", function(){
-    document.querySelector("nav").innerHTML = `<div>Norse IoT Resume Workshops</div><div id="projects"></div>`
+    document.querySelector("nav").innerHTML = `<div style="font-family: sans-serif;padding-bottom: 5px;">Norse IoT Resume Workshops</div><div id="projects"></div>`
     style.forEach(function(css) {
         if (css.link.search(".css") != -1) {
             document.querySelector("#projects").innerHTML += `<button onclick="changeStyle('${css.link}')">${css.name}</button>`
