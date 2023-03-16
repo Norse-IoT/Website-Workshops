@@ -67,7 +67,8 @@ header {
 }
 
 #header-seperator {
-    border: solid 3px #434343
+    border: solid 4px #169118;
+    margin-bottom: 1em;
 }
 
 
