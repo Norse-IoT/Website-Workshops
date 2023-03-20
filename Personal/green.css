@@ -1,0 +1,107 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+}
+
+header h1, header h2 {
+    margin: 0;
+}
+p {
+    margin-top: .5em;
+    margin-bottom: .5em;
+}
+main {
+    margin: 1em;
+}
+main {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+}
+header h1 {
+    font-size: 3.4em;
+}
+.date, #name h2 {
+    color: #636363;
+    
+}
+
+#name h1 {
+    font-weight: bold;
+}
+h3 {
+    color: #3f8e3e;
+    margin-top: 0em;
+}
+
+#contact-top {
+    display: flex;
+    margin-top: 1em;
+    margin-left: 1em;
+}
+#contact-top a {
+    padding: .75em;
+    background: #0e8201;
+    color: white;
+    text-decoration: none;
+}
+
+
+#contact-top a:hover {
+    background-color: #25a801;
+}
+a {
+    color: #0e8201;
+    font-weight: bold;
+}
+a:hover {
+    color:#558e3e
+}
+#main-2, #name {
+    margin-right: 4em;
+}
+
+header {
+    min-height: 6em;
+    height: fit-content;
+    padding-bottom: 1em;
+}
+
+#contact-side, #name-seperator, #header-seperator {
+    display: none;
+}
+
+.company {
+    font-weight: bold;
+}
+body {
+    margin: 0;
+}
+
+#main-2 {
+    background: #004e3c;
+    
+}
+
+#main-2 section {
+    padding: 1em;
+}
+
+#main-2 * {
+    color: white;
+}
+
+
+#main-2 span {
+    color: grey
+}
+
+#main-2 img {
+    width: 250px;
+}
+
+#name {
+    display: flex;
+    flex-direction: column-reverse;
+}
