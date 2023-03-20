@@ -16,7 +16,7 @@ window.addEventListener("load", function(){
 
         }
     })
-    document.querySelector("nav").innerHTML += `<button onclick='download()'>Download Template</button></a>`
+    document.querySelector("nav").innerHTML += `<button onclick='download()'>Download Template</button><a href="../"><button>Back to Templates</button></a>`
 });
 
 function changeStyle(style) {
@@ -27,7 +27,7 @@ function changeStyle(style) {
 let html;
 let css = "red.css";
 async function download() {
-    let connection = await fetch("http://127.0.0.1:5500/Resume/index.html");
+    let connection = await fetch("https://norse-iot.github.io/Website-Workshops/Personal/");
     html = await connection.text();
     let styleBegin = html.slice(0, html.search("<!--STYLE SWITCHER BEGIN-->"))
     let styleEnd = html.slice(html.search("<!--STYLE SWITCHER END-->")+26)
@@ -36,7 +36,7 @@ async function download() {
     let linkEnd = html.slice(html.search(".css\">")+6)
     let link = (html.slice(linkBegin, linkEnd))
     
-    connection = await fetch(`http://127.0.0.1:5500/Resume/${css}`);
+    connection = await fetch(`https://norse-iot.github.io/Website-Workshops/Personal/${css}`);
     let downloadCSS = await connection.text();
     html = `${linkBegin}<style>${downloadCSS}</style>${linkEnd}`
 
